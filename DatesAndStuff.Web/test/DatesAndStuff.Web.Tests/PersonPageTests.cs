@@ -176,7 +176,7 @@ public class PersonPageTests
         // Assert
         wait.Until(ExpectedConditions.ElementExists(By.CssSelector("table tbody tr")));
         var flights = driver.FindElements(By.CssSelector("table tbody tr"));
-        flights.Count.Should().BeGreaterOrEqualTo(3);
+        flights.Count.Should().BeGreaterThanOrEqualTo(3);
     }
     private bool IsElementPresent(By by)
     {
